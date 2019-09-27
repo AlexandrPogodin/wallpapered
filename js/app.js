@@ -6,13 +6,20 @@ const imgDefault = "/img/load.png";
 let img = "";
 
 function updateImg() {
-  updateBtn.classList.add("disabled");
   fetch(url).then(response => {
     img = response.url;
     wallpaperLink.href = img;
     wallpaper.src = img;
-    updateBtn.classList.remove("disabled");
+    setTimeout(btnShow, 2000);
   });
+}
+
+function btnHide() {
+  updateBtn.classList.add("disabled");
+}
+
+function btnShow() {
+  updateBtn.classList.remove("disabled");
 }
 
 updateImg();
@@ -21,5 +28,6 @@ updateBtn.addEventListener("click", event => {
   event.preventDefault();
   wallpaperLink.href = "";
   wallpaper.src = imgDefault;
-  setTimeout(updateImg, 2000);
+  btnHide();
+  updateImg();
 });
