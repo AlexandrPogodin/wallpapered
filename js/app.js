@@ -10,7 +10,7 @@ function updateImg() {
     img = response.url;
     wallpaperLink.href = img;
     wallpaper.src = img;
-    setTimeout(btnShow, 2000);
+    setTimeout(btnShow, 1000);
   });
 }
 
