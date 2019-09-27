@@ -2,7 +2,7 @@ const url = "https://source.unsplash.com/1750x3500/?wallpaper,iphone";
 const wallpaper = document.querySelector("#wallpaper");
 const wallpaperLink = document.querySelector("#wallpaperLink");
 const updateBtn = document.querySelector("#updateBtn");
-const imgDefault = "/img/load.png";
+const imgDefault = "/img/load.gif";
 let img = "";
 
 function updateImg() {
